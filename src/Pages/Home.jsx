@@ -1,6 +1,8 @@
+import { Typography } from "@mui/material"
+
 const Home = () => {
     return (
-        <div>Home</div>
+        <Typography variant="h2" component="h1">Hello DashBoard</Typography>
     )
 }
 
