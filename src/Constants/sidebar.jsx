@@ -10,7 +10,7 @@ const sidebar = [
         id: uuidv4(), 
         title: 'Dashboard', 
         listItems: [
-            {id: uuidv4(), name: 'Home', icon: <LineStyle/>},
+            {id: uuidv4(), name: 'Home', link: '/', icon: <LineStyle/>},
             {id: uuidv4(), name: 'Analytics', icon: <Timeline/>},
             {id: uuidv4(), name: 'Sales', icon: <TrendingUp/>}
         ]
@@ -19,9 +19,9 @@ const sidebar = [
         id: uuidv4(), 
         title: 'Quick Menu', 
         listItems: [
-            {id: uuidv4(), name: 'Users', icon: <PermIdentity/>},
-            {id: uuidv4(), name: 'NewUser', icon: <Storefront/>},
-            {id: uuidv4(), name: 'Products', icon: <AttachMoney/>},
+            {id: uuidv4(), name: 'Users', link: '/users', icon: <PermIdentity/>},
+            {id: uuidv4(), name: 'NewUser', link: '/newuser', icon: <Storefront/>},
+            {id: uuidv4(), name: 'Products', link: '/products', icon: <AttachMoney/>},
             {id: uuidv4(), name: 'Transactions', icon: <BarChart/>},
             {id: uuidv4(), name: 'Reports', icon: <MailOutline/>}
         ]

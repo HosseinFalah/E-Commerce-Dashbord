@@ -1,8 +1,8 @@
 import { Box, List, ListItemButton, ListItemIcon, ListItemText, ListSubheader } from "@mui/material"
 import { sidebar } from "../Constants/sidebar"
+import { Link } from "react-router-dom";
 
 const SideBar = () => {
-    console.log(sidebar);
     return (
         <Box>
             {sidebar.map(item => (
@@ -15,13 +15,15 @@ const SideBar = () => {
                             {item.title}
                         </ListSubheader>
                     }>
-                        {item.listItems.map(item => (
-                            <ListItemButton key={item.id} sx={{mx: 2}}>
-                                <ListItemIcon>
-                                    {item.icon}
-                                </ListItemIcon>
-                                <ListItemText primary={item.name} />
-                            </ListItemButton>
+                        {item.listItems.map(items => (
+                            <Link key={items.id} to={items.link} style={{textDecoration: 'none', color: 'inherit'}}>
+                                <ListItemButton sx={{mx: 2}}>
+                                    <ListItemIcon>
+                                        {items.icon}
+                                    </ListItemIcon>
+                                    <ListItemText primary={items.name} />
+                                </ListItemButton>
+                            </Link>
                         ))}
                 </List>
             ))}
